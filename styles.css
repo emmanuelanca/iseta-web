@@ -1,0 +1,107 @@
+/* Reset general de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Contenedor centralizado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ----------------------------------
+   ESTILOS DEL HEADER
+---------------------------------- */
+.top-header {
+  padding: 15px 0;
+  background-color: #fff;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  height: 90px; /* Ajusta la altura según la proporción de tu imagen PNG */
+  width: auto;
+  display: block;
+}
+
+/* Buscador (Arriba a la derecha) */
+.search-box {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+  width: 200px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
+  width: 100%;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ----------------------------------
+   ESTILOS DE LA NAVBAR (AZUL)
+---------------------------------- */
+.main-navbar {
+  background-color: #0033cc; /* Azul principal */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 16px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+}
+
+.nav-item a i {
+  font-size: 10px;
+}
+
+/* Efecto hover en los enlaces */
+.nav-item a:hover {
+  background-color: #002299; /* Azul un poco más oscuro */
+}
