@@ -1,61 +1,208 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ISETA - Instituto Superior Experimental de Tecnología Alimentaria</title>
-  <!-- Iconos de FontAwesome para la lupa del buscador y las flechitas despliegan -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISETA – Instituto Experimental de Tecnología Alimentaria</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ENCABEZADO SUPERIOR -->
-  <header class="top-header">
-    <div class="container header-container">
-      <!-- Logo de la institución -->
-      <a href="#" class="logo-link">
-        <img src="iseta_logo.png" alt="ISETA - Instituto Superior Experimental de Tecnología Alimentaria" class="logo-img">
-      </a>
+<a class="skip-link" href="#acc-content">Saltar al contenido (presiona la tecla Intro)</a>
 
-      <!-- Buscador superior -->
-      <div class="search-box">
-        <input type="text" placeholder="Buscar ...">
-        <button type="submit" aria-label="Buscar">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="header-top">
+    <a class="logo-link" href="index.html" aria-label="ISETA - Inicio">
+      <img src="images/iseta_logo.png" alt="ISETA - Instituto Superior Experimental de Tecnología Alimentaria" class="site-logo">
+    </a>
+
+    <form class="search-form" role="search" aria-label="Buscar en el sitio">
+      <input type="search" id="siteSearch" name="s" placeholder="Buscar …">
+      <button type="submit" aria-label="Buscar">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M21 20.3l-5.4-5.4a7.5 7.5 0 1 0-1.4 1.4l5.4 5.4a1 1 0 0 0 1.4-1.4zM4.5 10.5a6 6 0 1 1 12 0 6 6 0 0 1-12 0z"/></svg>
+      </button>
+    </form>
+
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="primary-nav" id="primaryNav" aria-label="Menú principal">
+    <ul class="nav-menu">
+      <li class="menu-item has-submenu">
+        <a href="#institucionales">Institucionales</a>
+        <button class="submenu-toggle" aria-label="Mostrar submenú de Institucionales" aria-expanded="false">▾</button>
+        <ul class="sub-menu">
+          <li><a href="#quienes-somos">¿Quiénes somos?</a></li>
+          <li><a href="#autoridades">Autoridades</a></li>
+          <li><a href="#legales">Legales</a></li>
+        </ul>
+      </li>
+      <li class="menu-item has-submenu">
+        <a href="#departamentos">Departamentos y Servicios</a>
+        <button class="submenu-toggle" aria-label="Mostrar submenú de Departamentos y Servicios" aria-expanded="false">▾</button>
+        <ul class="sub-menu">
+          <li><a href="#biblioteca">Biblioteca</a></li>
+          <li><a href="#capacitaciones">Capacitaciones</a></li>
+          <li><a href="#semillas-granos">Dpto de Análisis de Calidad de Semillas y Granos</a></li>
+          <li><a href="#fisico-quimicos">Dpto de Análisis Físico-químicos</a></li>
+          <li><a href="#cereales-calidad">Dpto de Cereales y Calidad</a></li>
+          <li><a href="#desa">Dpto de Evaluación Sensorial de Alimentos (DESA)</a></li>
+          <li><a href="#iacta">Dpto de Investigación, Asistencia y Capacitación Tecnológico Alimentaria (IACTA)</a></li>
+          <li><a href="#microbiologia">Dpto de Microbiología</a></li>
+          <li><a href="#investigacion">Investigación</a></li>
+        </ul>
+      </li>
+      <li class="menu-item has-submenu">
+        <a href="#carreras">Carreras</a>
+        <button class="submenu-toggle" aria-label="Mostrar submenú de Carreras" aria-expanded="false">▾</button>
+        <ul class="sub-menu">
+          <li><a href="#gastronomicos">Tec. Sup. en Servicios Gastronómicos</a></li>
+          <li><a href="#alimentos">Tec. Sup. en Alimentos</a></li>
+          <li><a href="#biotecnologia">Tec. Sup. en Biotecnología</a></li>
+          <li><a href="#sistemas">Tec. Sup. en Análisis de Sistemas</a></li>
+          <li><a href="#higiene">Tec. Sup. en Higiene, Seguridad y Ambiente Laboral</a></li>
+          <li><a href="#agricola-ganadera">Tec. Sup. en Producción Agrícola Ganadera</a></li>
+          <li><a href="#energias-renovables">Tec. Sup. en Gestión de Energías Renovables (H. Yrigoyen)</a></li>
+          <li><a href="#mecanica-liviana">Tec. Sup. en Mecánica Liviana</a></li>
+        </ul>
+      </li>
+      <li class="menu-item"><a href="#aula-virtual">Aula Virtual</a></li>
+      <li class="menu-item"><a href="#pruebas-seleccion">Pruebas de selección</a></li>
+      <li class="menu-item"><a href="#noticias">Noticias</a></li>
+      <li class="menu-item"><a href="#webmail">Webmail</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===================== CONTENIDO ===================== -->
+<main id="acc-content">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>Bienvenidos a I.S.E.T.A</h2>
+      <p>El Instituto Superior Experimental de Tecnología Alimentaria (ISETA) depende de la Dirección General de Cultura y Educación de la Provincia de Buenos Aires inaugurado el 17/7/1978.</p>
+    </div>
+  </section>
+
+  <section class="noticias" id="noticias">
+    <div class="container">
+      <div class="news-grid">
+
+        <article class="news-card">
+          <img class="thumb" src="images/noticias/manipulacion-alimentos.jpg" alt="¿Tu carnet de manipulación de alimentos está vencido? ¡Es momento de revalidarlo!">
+          <h3><a href="#">¿Tu carnet de manipulación de alimentos está vencido? ¡Es momento de revalidarlo!</a></h3>
+          <span class="divider"></span>
+          <p>Mantener tu Carnet de Manipulación de Alimentos actualizado no solo es una obligación legal, sino también una muestra de compromiso …</p>
+        </article>
+
+        <article class="news-card">
+          <img class="thumb" src="images/noticias/17-junio.png" alt="17 de Junio – Día de la Libertad Latinoamericana">
+          <h3><a href="#">17 de Junio – Día de la Libertad Latinoamericana</a></h3>
+          <span class="divider"></span>
+          <p>Acto Conmemorativo en Homenaje al General Martín Miguel de Güemes. El pasado martes 17 de junio, se llevó a cabo …</p>
+        </article>
+
+        <article class="news-card">
+          <img class="thumb" src="images/noticias/10-junio-malvinas.png" alt="10 de junio: Día de la Afirmación de los Derechos Argentinos sobre las Malvinas, Islas y Sector Antártico">
+          <h3><a href="#">10 de junio: Día de la Afirmación de los Derechos Argentinos sobre las Malvinas, Islas y Sector Antártico</a></h3>
+          <span class="divider"></span>
+          <p>En el marco del Día de la Afirmación de los Derechos Argentinos sobre las Islas Malvinas, conmemorado cada 10 de …</p>
+        </article>
+
+        <article class="news-card">
+          <img class="thumb" src="images/noticias/feria-educacion-empleo.png" alt="¡Feria de Educación y Empleo 2025!">
+          <h3><a href="#">¡Feria de Educación y Empleo 2025!</a></h3>
+          <span class="divider"></span>
+          <p>El pasado jueves 5 de junio se llevó a cabo una nueva edición de la Feria de Educación y Empleo …</p>
+        </article>
+
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- BARRA DE NAVEGACIÓN -->
-  <nav class="main-navbar">
+  <section class="quienes-somos" id="quienes-somos">
     <div class="container">
-      <ul class="nav-menu">
-        <li class="nav-item dropdown">
-          <a href="#">INSTITUCIONALES <i class="fa-solid fa-chevron-down"></i></a>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#">DEPARTAMENTOS Y SERVICIOS <i class="fa-solid fa-chevron-down"></i></a>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#">CARRERAS <i class="fa-solid fa-chevron-down"></i></a>
-        </li>
-        <li class="nav-item">
-          <a href="#">AULA VIRTUAL</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">PRUEBAS DE SELECCIÓN</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">NOTICIAS</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">WEBMAIL</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      <h2>¿Quiénes somos?</h2>
+      <span class="divider divider-light"></span>
+      <p>El Instituto Superior Experimental de Tecnología Alimentaria (ISETA) depende de la Dirección General de Cultura y Educación de la Provincia de Buenos Aires inaugurado el 17/7/1978. Las actividades que se realizan en la institución le permiten insertarse en las siguientes áreas de trabajo:</p>
 
+      <h4>DOCENCIA:</h4>
+      <p>Comprende el dictado de las Carreras de Técnico Superior en Alimentos. Técnico Superior en Producción Agrícola Ganadera. Técnico Superior en Mecánica Liviana. Técnico Superior en Análisis de Sistemas. Técnico Superior en Higiene y Seguridad en el Trabajo. Técnico Superior en Servicios Gastronómicos. Técnico Superior en Biotecnología. Y cuenta con una extensión áulica en la ciudad de Henderson, partido de Hipólito Yrigoyen con la carrera Técnico Superior en Gestión de las Energías Renovables.</p>
+
+      <h4>SERVICIOS:</h4>
+      <p>Implica la realización de análisis de suelos, aguas, semillas, alimentos balanceados, productos alimenticios en general, y asesoramiento técnico a industrias y productores.</p>
+
+      <h4>INVESTIGACIÓN:</h4>
+      <p>Abarca el estudio y desarrollo Científico-Tecnológico en alimentos, especialmente en áreas tales como: nutrición y microbiología, productos a base de carnes, lácteos, frutas y hortalizas y cereales, y evaluación sensorial de los mismos.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <p>Copyright ©<span id="year"></span> <a href="index.html">ISETA</a>. Education Zone | Desarrollado por <a href="#" rel="nofollow">Rara Theme</a>.
+    Funciona con <a href="#" rel="nofollow">WordPress</a>.</p>
+  </div>
+</footer>
+
+<!-- ===================== WHATSAPP FLOTANTE (fijo, no se mueve al scrollear) ===================== -->
+<div class="whatsapp-widget">
+  <span class="whatsapp-bubble">Contactanos!</span>
+  <a href="https://wa.me/5491100000000" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Contactanos por WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="#fff" d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 1.9 6.6L3 29l7.2-2.1c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.3 1.3-4.2-.2-.4a10.2 10.2 0 0 1-1.6-5.4C5.5 9.9 10.2 5.3 16 5.3S26.5 9.9 26.5 15.6 21.8 25.7 16 25.7zm5.8-7.6c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+  </a>
+</div>
+
+<script>
+  // Menú móvil (hamburguesa)
+  const menuToggle = document.getElementById('menuToggle');
+  const primaryNav = document.getElementById('primaryNav');
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!expanded));
+    primaryNav.classList.toggle('is-open');
+  });
+
+  // Submenús desplegables (click en móvil, hover en escritorio vía CSS)
+  document.querySelectorAll('.submenu-toggle').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const li = btn.closest('.menu-item');
+      const isOpen = li.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+
+  // Cerrar el menú móvil al elegir un enlace
+  primaryNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 880) {
+        primaryNav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Año dinámico en el copyright
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Búsqueda simple (evita recarga; feedback visual)
+  document.querySelector('.search-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const q = document.getElementById('siteSearch').value.trim();
+    if (q) {
+      alert('Buscar: "' + q + '" (funcionalidad de búsqueda de ejemplo)');
+    }
+  });
+</script>
 </body>
 </html>
